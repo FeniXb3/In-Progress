@@ -79,6 +79,14 @@ namespace Fungus
 			
 			return instance;
 		}
+
+		protected virtual void Awake()
+		{
+			if (instance == null)
+			{
+				instance = this;
+			}
+		}
 		
 		public static Texture2D CreateColorTexture(Color color, int width, int height)
 		{
